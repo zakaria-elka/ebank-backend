@@ -27,7 +27,7 @@ import java.util.UUID;
 import java.util.stream.Stream;
 
 @SpringBootApplication
-public class EbankingBackendApplication {
+public  class   EbankingBackendApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(EbankingBackendApplication.class, args);
@@ -50,8 +50,8 @@ public class EbankingBackendApplication {
                    e.printStackTrace();
                }
            });
-            List<BankAccountDTO> bankAccounts = bankAccountService.bankAccountList();
-            for (BankAccountDTO bankAccount:bankAccounts){
+             List<BankAccountDTO> bankAccounts = bankAccountService.bankAccountList();
+             for (BankAccountDTO bankAccount:bankAccounts){
                 for (int i = 0; i <10 ; i++) {
                     String accountId;
                     if(bankAccount instanceof SavingBankAccountDTO){
